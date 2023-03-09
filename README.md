@@ -1,4 +1,4 @@
-# e-commerce
+# Restaurant System
 
 ## Project setup
 ```
