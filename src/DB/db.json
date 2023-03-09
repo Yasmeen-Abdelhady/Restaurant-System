@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "name": "Yasmeen",
+      "email": "yasmeensoliman448@gmail.com",
+      "password": "1234567890",
+      "id": 1
+    },
+    {
+      "name": "Yasmeen",
+      "email": "yasmeensoliman448@gmail.com",
+      "password": "1234567890",
+      "id": 2
+    },
+    {
+      "name": "Yasmeen",
+      "email": "yasmeensoliman448@gmail.com",
+      "password": "123123123123",
+      "id": 4
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "The Chef",
+      "phone": "01003802708",
+      "address": "Mansoura City",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "name": "The Chef",
+      "phone": "01003802708",
+      "address": "Mansoura City",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "name": "dddddddddd",
+      "phone": "dddddddddddd",
+      "address": "ddddddddddd",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "name": "dddddddddd",
+      "phone": "dddddddddddd",
+      "address": "ddddddddddd",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "name": "wwwwwwwwww",
+      "phone": "wwwwwwwwwww",
+      "address": "wwwwwwwwwwwww",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "name": "rrrrrrrrrrr",
+      "phone": "rrrrrrrrrrr",
+      "address": "rrrrrrrrrrrrrr",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "name": "rrrrrrrrrrr",
+      "phone": "rrrrrrrrrrr",
+      "address": "rrrrrrrrrrrrrr",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "name": "KFC Restaurant",
+      "phone": "12345678910",
+      "address": "Mansoura city",
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "name": "KFC Restaurant",
+      "address": "mansoygxhs",
+      "phone": "55555555555",
+      "id": 9
+    },
+    {
+      "name": "KFC Restaurant",
+      "address": "swshjjjjjjjjjj2222222",
+      "phone": "55555555555",
+      "id": 10
+    },
+    {
+      "name": "KFC Restaurant",
+      "address": "eko3ksocdcddj",
+      "phone": "4444444444",
+      "id": 11
+    },
+    {
+      "name": "gggggggggggg",
+      "address": "ccccccccccccc",
+      "phone": "33333333333",
+      "id": 12
+    },
+    {
+      "name": "eeeeeeee44444",
+      "address": "4444ffffffffffffff",
+      "phone": "55555555555555",
+      "id": 13
+    }
+  ],
+  "categories": [],
+  "items": []
+}
