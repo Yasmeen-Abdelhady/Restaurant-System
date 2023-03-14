@@ -3,7 +3,7 @@
         <NavbarComponent />
         <div class="text-start">
             <router-link :to="{name: 'MenuComponent' , params: {ResId:ResId}}">
-                <button class="btn btn-info"> Back to Menu </button>
+                <button class="btn btn-info"> Go Back </button>
             </router-link>
         </div>
         <div>

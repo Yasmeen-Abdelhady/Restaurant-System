@@ -1,13 +1,15 @@
 <template>
     <div class="container">
         <NavbarComponent />
-        <div>
-            <router-link :to="{name: 'AddCategories' , params: {ResId:ResId}}" class="float-start">
-                <button class="btn btn-success"> View/Add Categories</button>
+        <div class="float-start">
+            <router-link :to="{name: 'AddCategories' , params: {ResId:ResId}}" >
+                <button class="btn btn-success">Add Categories</button>
+            </router-link> &nbsp;
+            <router-link :to="{name: 'DetailsRes' , params: {ResId:ResId}}" >
+                <button class="btn btn-info">Go Back</button>
             </router-link>
-            <button class="btn btn-success float-end" v-if="listOfCategories.length >0">Add Items</button>
-            <div class="clearfix"></div>
         </div>
+        <div class="clearfix"></div>
         <div>
             <h1 class="mb-0">{{ResName}}</h1>
             <p class="text-muted">{{ResAddress}}</p>
@@ -32,19 +34,9 @@
                     params: {ResId : this.ResId , catId : category.id}}">
                         <button class="btn btn-info">Update</button>
                     </router-link> &nbsp;
-                    <router-link :to="{name:'DeleteCategory' , params: {ResId : this.ResId , catId : category.id}}">
+                    <router-link :to="{name:'DeleteCategory' , params: {ResId:this.ResId , catId : category.id}}">
                         <button class="btn btn-danger">Delete</button>
                     </router-link> &nbsp;
-
-                    <!-- <router-link :to="{name:'DeleteRes' , params: {ResId : restaurant.id}}">
-                        <button class="btn btn-danger">Delete</button>
-                    </router-link> &nbsp;
-                    <router-link :to="{name:'UpdateRes' , params: {ResId : restaurant.id}}">
-                        <button class="btn btn-info">Update</button>
-                    </router-link> &nbsp;
-                    <router-link :to="{name:'MenuComponent' , params: {ResId : restaurant.id}}">
-                        <button class="btn btn-success">Menu</button>
-                    </router-link> -->
                 </td>
             </tr>
         </tbody>

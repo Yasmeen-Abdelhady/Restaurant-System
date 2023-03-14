@@ -8,11 +8,16 @@ import AddRestaurant from "@/components/Restaurant/AddRestaurant.vue";
 import DeleteRes from "@/components/Restaurant/DeleteRes.vue";
 import DeleteAll from "@/components/Restaurant/DeleteAll.vue";
 import UpdateRes from "@/components/Restaurant/UpdateRes.vue";
+import DetailsRes from "@/components/Menu/DetailsRes.vue";
 import MenuComponent from "@/components/Menu/MenuComponent.vue";
 import AddCategories from "@/components/Menu/AddCategories.vue";
 import UpdateCategory from "@/components/Menu/UpdateCategory.vue";
 import DeleteCategory from "@/components/Menu/DeleteCategory.vue";
 import DeleteAllCategories from "@/components/Menu/DeleteAllCategories.vue";
+import AddNewItem from "@/components/Menu/AddNewItem.vue";
+import UpdateItem from "@/components/Menu/UpdateItem.vue";
+import DeleteItem from "@/components/Menu/DeleteItem.vue";
+import DeleteAllItem from "@/components/Menu/DeleteAllItem.vue";
 import PageNotFound from "../views/PageNotFound.vue";
 
 const routes = [
@@ -62,6 +67,11 @@ const routes = [
     component: UpdateRes
   },
   {
+    path: '/DetailsRes/:ResId',
+    name: 'DetailsRes',
+    component: DetailsRes
+  },
+  {
     path: '/Menu/:ResId',
     name: 'MenuComponent',
     component: MenuComponent
@@ -85,6 +95,26 @@ const routes = [
     path: '/Menu/DeleteAllCategories/:ResId',
     name: 'DeleteAllCategories',
     component: DeleteAllCategories
+  },
+  {
+    path: '/Menu/item/AddNewItem/:ResId',
+    name: 'AddNewItem',
+    component: AddNewItem
+  },
+  {
+    path: '/Menu/item/UpdateItem/:ResId/:itemId',
+    name: 'UpdateItem',
+    component: UpdateItem
+  },
+  {
+    path: '/Menu/item/DeleteItem/:ResId/:itemId',
+    name: 'DeleteItem',
+    component: DeleteItem
+  },
+  {
+    path: '/Menu/item/DeleteAllItem/:ResId',
+    name: 'DeleteAllItem',
+    component: DeleteAllItem
   },
   {
     path: '/:catchAll(.*)',

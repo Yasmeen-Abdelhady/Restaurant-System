@@ -25,7 +25,7 @@
                     <router-link :to="{name:'UpdateRes' , params: {ResId : restaurant.id}}">
                         <button class="btn btn-info">Update</button>
                     </router-link> &nbsp;
-                    <router-link :to="{name:'MenuComponent' , params: {ResId : restaurant.id}}">
+                    <router-link :to="{name:'DetailsRes' , params: {ResId : restaurant.id}}">
                         <button class="btn btn-success">Menu</button>
                     </router-link>
                 </td>

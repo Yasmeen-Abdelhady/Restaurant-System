@@ -41,7 +41,7 @@
         }}</span>
         </div>
         <div class="mb-3">
-        <button type="submit" class="btn btn-primary" @click="signUp">
+        <button type="submit" class="btn btn-primary" @click="validateEmailBeforeSignUp()">
             SignUp Now
         </button>
         </div>
@@ -49,6 +49,8 @@
         You Already Have Account ?
         <router-link :to="{ name: 'LoginView' }">Login</router-link>
         </div>
+        <div class="alert alert-success" v-if="successMessage">{{successMessage}}</div>
+        <div class="alert alert-danger" v-if="errorMessage">{{errorMessage}}</div>
     </form>
 </template>
 
@@ -64,16 +66,35 @@ export default {
         name: "",
         email: "",
         password: "",
-        };
+        userEmailExists:[],
+        successMessage: "",
+        errorMessage: ""
+        }
     },
     validations() {
         return {
-        name: { required },
+        name: { required , minLength:minLength(10)},
         password: { required, minLength: minLength(10) },
         email: { required, email },
         };
     },
     methods: {
+        async validateEmailBeforeSignUp() {
+            let result = await axios.get(`http://localhost:3000/users?email=${this.email}`)
+            if(result.status == 200){
+                console.log(result)
+                this.userEmailExists = result.data
+                if(this.userEmailExists.length >0){
+                    this.successMessage = "";
+                    this.errorMessage = "this email already exists...";
+                }
+                else {
+                    this.successMessage = "";
+                    this.errorMessage = "";
+                    this.signUp();
+                }
+            }
+        },
         async signUp() {
             this.v$.$validate();
             if(!this.v$.$error){
@@ -86,7 +107,10 @@ export default {
                     // set data in local storage
                     window.localStorage.setItem('userInfo',JSON.stringify(res.data))
                     // redirect to home page
-                    this.$router.push({name : 'home'})
+                    this.successMessage = "Loading...";
+                    setTimeout(()=>{
+                        this.$router.push({name : 'home'})
+                    },1000)
                 }).catch(error => {
                     console.log(error)
                 });

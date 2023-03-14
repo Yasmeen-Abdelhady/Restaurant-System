@@ -1,5 +1,6 @@
 <template>
     <form @click.prevent>
+        <NavbarComponent />
         <h1>Your Profile</h1>
         <div class="mb-3 text-start">
         <label for="name" class="form-label">UserName</label>
@@ -40,8 +41,11 @@
 </template>
 
 <script>
+import NavbarComponent from "@/components/Header/Navbar.vue";
+
 export default {
     name : 'ProfileForm',
+    components: {NavbarComponent},
     data() {
         return {
             name : '',

@@ -3,7 +3,7 @@
         <NavbarComponent />
         <div class="text-start">
             <router-link :to="{name: 'MenuComponent' , params: {ResId:ResId}}">
-                <button class="btn btn-info"> Back to Menu </button>
+                <button class="btn btn-info"> Go Back </button>
             </router-link>
         </div>
         <div>
@@ -77,7 +77,7 @@ export default {
             })
         },
         async getUserCategories() {
-            let result = await axios.get(`http://localhost:3000/categories?ResId${this.ResId}&userId${this.userId}`);
+            let result = await axios.get(`http://localhost:3000/categories?ResId=${this.ResId}&userId=${this.userId}`);
             if(result.status == 200){
                 this.listOfCategories = result.data;
             }
@@ -85,7 +85,9 @@ export default {
         async AddCategory() {
             this.v$.$validate();
             if(!this.v$.$error){
+                console.log(this.listOfCategories)
                 let filteredName = this.listOfCategories.filter(ele => ele.name.toLocaleLowerCase() == this.name.toLocaleLowerCase());
+                console.log(filteredName)
                 if(filteredName.length > 0){
                     this.successMessage = "";
                     this.errorMessage = "Name Is Duplicated"

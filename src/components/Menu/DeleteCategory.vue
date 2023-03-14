@@ -5,7 +5,7 @@
             <p>Are You Sure You Want To Delete This Category ?</p>
             <p>{{categoryName}}</p>
             <div>
-                <router-link :to='{name: "MenuComponent" , params:{ResId:this.ResId}}'>
+                <router-link :to='{name: "MenuComponent" , params:{ResId:ResId}}'>
                     <button class="btn btn-info">Go Back To Menu</button>
                 </router-link> &nbsp; &nbsp;
                 <button class="btn btn-danger" @click="DeleteCategory()">Delete</button>

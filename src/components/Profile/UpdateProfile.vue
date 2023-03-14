@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <NavbarComponent />
         <form @click.prevent>
             <h1>Update Your Profile</h1>
             <div class="mb-3 text-start">
@@ -48,12 +49,14 @@
 </template>
 
 <script>
+import NavbarComponent from "@/components/Header/Navbar.vue";
 import useVuelidate from '@vuelidate/core';
 import {required , email , minLength} from '@vuelidate/validators';
 import axios from "axios";
 
 export default {
     name : 'UpdateProfile',
+    components:{NavbarComponent},
     data() {
         return {
             v$ : useVuelidate(),

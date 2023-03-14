@@ -17,6 +17,24 @@
       "email": "yasmeensoliman448@gmail.com",
       "password": "123123123123",
       "id": 4
+    },
+    {
+      "name": "Yasmeen",
+      "email": "yasmeensoliman448@gmail.com",
+      "password": "1111111111111111",
+      "id": 5
+    },
+    {
+      "name": "Yasmeen",
+      "email": "yysmsm900@gmail.com",
+      "password": "12312312323212",
+      "id": 6
+    },
+    {
+      "name": "Yasmeen rrr",
+      "email": "yswgsydgy@jidj.com",
+      "password": "12312331233",
+      "id": 7
     }
   ],
   "restaurants": [
@@ -28,9 +46,9 @@
       "id": 1
     },
     {
-      "name": "The Chef",
-      "phone": "01003802708",
-      "address": "Mansoura City",
+      "name": "Pyramids ",
+      "address": "Cairo Egypt",
+      "phone": "015678977639",
       "userId": 4,
       "id": 2
     },
@@ -49,25 +67,11 @@
       "id": 4
     },
     {
-      "name": "wwwwwwwwww",
-      "phone": "wwwwwwwwwww",
-      "address": "wwwwwwwwwwwww",
+      "name": "Fish Food ",
+      "address": "Tanta , Egypt",
+      "phone": "0101001010",
       "userId": 4,
       "id": 5
-    },
-    {
-      "name": "rrrrrrrrrrr",
-      "phone": "rrrrrrrrrrr",
-      "address": "rrrrrrrrrrrrrr",
-      "userId": 4,
-      "id": 6
-    },
-    {
-      "name": "rrrrrrrrrrr",
-      "phone": "rrrrrrrrrrr",
-      "address": "rrrrrrrrrrrrrr",
-      "userId": 4,
-      "id": 7
     },
     {
       "name": "KFC Restaurant",
@@ -77,36 +81,55 @@
       "id": 8
     },
     {
-      "name": "KFC Restaurant",
-      "address": "mansoygxhs",
-      "phone": "55555555555",
+      "name": "Tantawy Restaurant",
+      "phone": "01000100100100",
+      "address": "Mansoura , Egypt",
+      "userId": 4,
       "id": 9
-    },
-    {
-      "name": "KFC Restaurant",
-      "address": "swshjjjjjjjjjj2222222",
-      "phone": "55555555555",
-      "id": 10
-    },
-    {
-      "name": "KFC Restaurant",
-      "address": "eko3ksocdcddj",
-      "phone": "4444444444",
-      "id": 11
-    },
-    {
-      "name": "gggggggggggg",
-      "address": "ccccccccccccc",
-      "phone": "33333333333",
-      "id": 12
-    },
-    {
-      "name": "eeeeeeee44444",
-      "address": "4444ffffffffffffff",
-      "phone": "55555555555555",
-      "id": 13
     }
   ],
-  "categories": [],
-  "items": []
+  "categories": [
+    {
+      "name": "Breakfast",
+      "userId": 4,
+      "ResId": "1",
+      "id": 1
+    },
+    {
+      "name": "Dinner",
+      "userId": 4,
+      "ResId": "1",
+      "id": 2
+    },
+    {
+      "name": "Lunch",
+      "userId": 4,
+      "ResId": "1",
+      "id": 3
+    },
+    {
+      "name": "Drinks",
+      "userId": 4,
+      "ResId": "1",
+      "id": 4
+    },
+    {
+      "name": "Sweets",
+      "userId": 4,
+      "ResId": "1",
+      "id": 5
+    }
+  ],
+  "items": [
+    {
+      "name": "chicken pizza ",
+      "price": 90,
+      "qty": 10000,
+      "description": "lfrllgrfgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "userId": 4,
+      "ResId": "1",
+      "catId": 1,
+      "id": 1
+    }
+  ]
 }
